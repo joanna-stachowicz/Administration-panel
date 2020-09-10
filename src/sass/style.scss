@@ -1,12 +1,15 @@
-/* Components */
-@import "components/buttons";
-@import "components/formelements";
-@import "components/headers";
-
 /* Sections */
 @import "sections/variables";
 @import "sections/mixins";
 @import "sections/layout";
+
+/* Components */
+@import "components/buttons";
+@import "components/form_elements";
+@import "components/headers_links";
+@import "components/digit_list";
+@import "components/link_table";
+@import "components/sorting_table";
 
 /* Pages / Views */
 

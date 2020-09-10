@@ -1,0 +1,10 @@
+.list-wrapper {
+  @include flex;
+}
+
+.list-item-wrapper {
+  @include flex;
+  @include list;
+  flex: 0 0 45%;
+  width: 367px;
+}

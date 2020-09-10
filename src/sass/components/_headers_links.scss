@@ -1,0 +1,22 @@
+.page_header {
+  @include header($header-color, $font-medium);
+  text-transform: uppercase;
+}
+
+.section_header {
+  @include header($header-color, $font-bold);
+}
+
+.table-header {
+  @include header($header-color, $font-bold, 13px);
+}
+
+.large_link {
+  @include header($link-color, $font-light, 16px);
+  @include link;
+}
+
+.small_link {
+  @include header($link-color, $font-light, 13px);
+  @include link;
+}

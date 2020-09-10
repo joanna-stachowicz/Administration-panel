@@ -1,0 +1,34 @@
+.table-item-wrapper {
+  @include flex;
+  @include list;
+  transition: $transition;
+
+  p {
+    padding: 0 16px;
+  }
+
+  &:hover {
+    background-color: $hover-background-color;
+    cursor: pointer;
+    .icon-wrapper {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.icon-wrapper {
+  @include flex;
+  flex: 0 0 8%;
+  position: relative;
+  top: 16px;
+  right: 16px;
+
+  img {
+    flex: 1 0 50%;
+    height: 18px;
+    width: 18px;
+    opacity: 0;
+  }
+}

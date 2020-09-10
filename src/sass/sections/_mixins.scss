@@ -1,0 +1,35 @@
+@mixin header($color, $font-weight, $font-size: 16px, $text-align: left) {
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  text-align: $text-align;
+}
+
+@mixin link {
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $clicked-link-color;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin list {
+  position: relative;
+  height: 48px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: $pseudo-color;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+  }
+}

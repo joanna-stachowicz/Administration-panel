@@ -1,0 +1,48 @@
+.sorting-table-wrapper {
+  font-size: 13px;
+  @include flex;
+  transition: $transition;
+}
+
+.column-wrapper {
+  @include flex;
+  @include list;
+  width: 100%;
+  transition: $transition;
+
+  &:hover {
+    background-color: $hover-background-color;
+    cursor: pointer;
+  }
+
+  .column-name-wrapper {
+    @include flex;
+    flex: 1 0 9.09%;
+    padding-right: 6px;
+    text-align: center;
+    transition: $transition;
+
+    p {
+      flex: 1 0 70%;
+    }
+
+    img {
+      position: relative;
+      flex: 1 0 30%;
+      height: 11px;
+      width: 11px;
+      right: 24px;
+      top: 12px;
+      opacity: 0;
+    }
+
+    &:hover {
+      background-color: $background-color;
+      cursor: pointer;
+
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}

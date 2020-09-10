@@ -1,8 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: $background-color;
   font-family: $paragraph-font;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.7;
   font-weight: $font-light;
   color: $text-color;
+}
+
+section {
+  margin: 15px 15px;
+  padding: 50px 50px;
+  background-color: $color-light;
+  // text-align: center;
+  box-shadow: 2px 4px 20px 4px #eaeae7;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

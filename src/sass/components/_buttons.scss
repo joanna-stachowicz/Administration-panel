@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  margin: 24px auto;
+  width: 93px;
+  height: 41px;
+  line-height: 37px;
+  font-size: 18px;
+  border: 1px solid;
+  border-radius: $radius;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $brand-main-color;
+  border-color: $brand-main-color;
+  color: $color-light;
+  transition: $transition;
+
+  &:hover {
+    background-color: $clicked-link-color;
+    border-color: $clicked-link-color;
+  }
+}
