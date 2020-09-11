@@ -1,0 +1,35 @@
+.date-period-wrapper {
+  @include flex;
+  position: relative;
+  border: 1px solid $pseudo-color;
+  border-radius: $radius;
+  width: 360px;
+  height: 40px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: $pseudo-color;
+    width: 1px;
+    height: 80%;
+    top: 10%;
+    right: 52%;
+  }
+
+  &:hover {
+    border-color: $input-hover-color;
+  }
+
+  input {
+    border: none;
+    width: 150px;
+  }
+
+  img {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    bottom: 12px;
+    right: 18px;
+  }
+}

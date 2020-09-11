@@ -11,6 +11,10 @@
   @include header($header-color, $font-bold, 13px);
 }
 
+.input-text {
+  @include header($text-input-color, $font-light, 14px);
+}
+
 .large_link {
   @include header($link-color, $font-light, 16px);
   @include link;
