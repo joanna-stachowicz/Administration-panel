@@ -1,10 +1,32 @@
 .table-item-wrapper {
   @include flex;
   @include list;
+  height: 56px;
+
   transition: $transition;
 
-  p {
-    padding: 0 16px;
+  p:first-of-type {
+    flex: 0 0 30%;
+    padding-left: 16px;
+  }
+
+  p:last-of-type {
+    flex: 0 0 30%;
+  }
+
+  .icon-wrapper {
+    opacity: 0;
+    padding-right: 24px;
+
+    a {
+      @include icon;
+      @include link;
+      padding: 6px;
+    }
+
+    &:hover {
+      color: $clicked-link-color;
+    }
   }
 
   &:hover {
@@ -12,24 +34,7 @@
     cursor: pointer;
 
     .icon-wrapper {
-      img {
-        opacity: 1;
-      }
+      opacity: 1;
     }
-  }
-}
-
-.icon-wrapper {
-  @include flex;
-  flex: 0 0 8%;
-  position: relative;
-  top: 16px;
-  right: 16px;
-
-  img {
-    flex: 1 0 50%;
-    height: 18px;
-    width: 18px;
-    opacity: 0;
   }
 }

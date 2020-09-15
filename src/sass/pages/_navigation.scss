@@ -1,0 +1,86 @@
+.navigation {
+  background-color: $text-color;
+  width: 214px;
+  flex: 0 0 214px;
+
+  .brand-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 26px;
+
+    .brand-name {
+      flex: 1 0 70%;
+      color: $color-light;
+      font-family: $brand-font;
+      font-size: 28px;
+    }
+
+    a {
+      flex: 0 0 10%;
+      font-size: 28px;
+      color: $header-color;
+    }
+  }
+
+  .navigation__inner__wrapper {
+    display: flex;
+    text-decoration: none;
+    transition: $transition;
+    padding: 0 8px;
+    border-left: 6px solid $text-color;
+
+    p {
+      font-family: $icon-font;
+      flex: 1 0 20%;
+      padding-left: 12px;
+      color: $header-color;
+    }
+
+    h3 {
+      flex: 1 0 80%;
+    }
+
+    &:hover {
+      border-left: 6px solid $brand-main-color;
+      background-color: $text-input-color;
+    }
+  }
+
+  .navigation__inner {
+    @include pseudo;
+    padding-bottom: 24px;
+  }
+
+  .manager {
+    padding: 12px 26px;
+  }
+
+  .manager-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+
+    img {
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: #04ae00;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      top: 1%;
+      left: 26%;
+    }
+
+    a {
+      position: absolute;
+      top: 30%;
+      right: 10%;
+    }
+  }
+}

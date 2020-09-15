@@ -31,14 +31,8 @@
       position: absolute;
     }
 
-    img {
-      position: absolute;
-      flex: 1 0 30%;
-      height: 11px;
-      width: 11px;
-      right: 24px;
-      top: 12px;
-      opacity: 0;
+    a {
+      font-family: $icon-font;
     }
   }
 

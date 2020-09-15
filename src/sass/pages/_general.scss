@@ -1,0 +1,117 @@
+.main-body {
+  flex-basis: 100%;
+}
+
+/* Top bar */
+
+.top-bar-wrapper {
+  background-color: $color-light;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid $pseudo-color;
+
+  a {
+    font-size: 17px;
+    @include link;
+  }
+
+  .top-bar-inner {
+    @include top-bar-padding;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: $pseudo-color;
+      width: 1px;
+      height: 100%;
+      left: 12px;
+      bottom: 0;
+    }
+  }
+
+  .wallet-wrapper,
+  .login-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    @include icon;
+  }
+
+  .wallet-wrapper {
+    p:first-of-type {
+      margin-right: 12px;
+    }
+
+    h1 {
+      margin: 0 12px;
+      font-size: 19px;
+    }
+
+    p:last-of-type {
+      margin-left: 12px;
+    }
+  }
+
+  .login-wrapper {
+    p:first-of-type {
+      margin-right: 12px;
+      padding: 0 3px;
+      border: 1px solid $paragraph-text-color;
+      border-radius: 50%;
+      font-size: 12px;
+    }
+
+    p:last-of-type {
+      margin-left: 12px;
+    }
+
+    &:after {
+      top: -8px;
+      height: 123%;
+    }
+  }
+
+  .notification {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: $brand-main-color;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      top: 38%;
+      left: 50%;
+    }
+  }
+}
+
+/* General statistic */
+
+.general-statistic {
+  h1 {
+    @include pseudo-section-inner;
+  }
+
+  .calendar-wrapper {
+    @include pseudo-section-inner;
+    padding: 30px 0;
+  }
+}
+
+/* Links */
+
+.links {
+  h1 {
+    @include pseudo-section-inner;
+  }
+
+  .button {
+    text-align: center;
+  }
+}

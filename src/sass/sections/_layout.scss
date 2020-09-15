@@ -16,156 +16,28 @@ body {
 
 section {
   margin: 15px 15px;
-  padding: 50px 50px;
   background-color: $color-light;
   box-shadow: 2px 4px 20px 4px #eaeae7;
 }
 
-.container {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.main-wrapper {
+  display: flex;
 }
 
 .container-fluid {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  @include container;
+}
+
+.container {
+  @extend .container-fluid;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 30px 200px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-
-.col-sm-1,
-.col.md-1,
-.col.lg-1,
-.col.xl-1 {
-  flex: 0 0 8.33333%;
-  max-width: 8.33333%;
-}
-
-.col.md-2,
-.col-sm-2,
-.col.lg-2,
-.col.xl-2 {
-  flex: 0 0 16.66667%;
-  max-width: 16.66667%;
-}
-
-.col.md-3,
-.col-sm-3,
-.col.lg-3,
-.col.xl-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.col.md-4,
-.col-sm-4,
-.col.lg-4,
-.col.xl-4 {
-  flex: 0 0 33.33333%;
-  max-width: 33.33333%;
-}
-
-.col.md-5,
-.col-sm-5,
-.col.lg-5,
-.col.xl-5 {
-  flex: 0 0 41.66667%;
-  max-width: 41.66667%;
-}
-
-.col.md-6,
-.col-sm-6,
-.col.lg-6,
-.col.xl-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.col.md-7,
-.col-sm-7,
-.col.lg-7,
-.col.xl-7 {
-  flex: 0 0 58.33333%;
-  max-width: 58.33333%;
-}
-
-.col.md-8,
-.col-sm-8,
-.col.lg-8,
-.col.xl-8 {
-  flex: 0 0 66.66667%;
-  max-width: 66.66667%;
-}
-
-.col.md-9,
-.col-sm-9,
-.col.lg-9,
-.col.xl-9 {
-  flex: 0 0 75%;
-  max-width: 75%;
-}
-
-.col.md-10,
-.col-sm-10,
-.col.lg-10,
-.col.xl-10 {
-  flex: 0 0 83.33333%;
-  max-width: 83.33333%;
-}
-
-.col.md-11,
-.col-sm-11,
-.col.lg-11,
-.col.xl-11 {
-  flex: 0 0 91.66667%;
-  max-width: 91.66667%;
-}
-
-.col.md-12,
-.col-sm-12,
-.col.lg-12,
-.col.xl-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-@for $i from 1 through 12 {
-  .col-sm-#{$i} {
-    $width: 100% / 12 * $i;
-    flex: 0 0 $width;
-    max-width: $width;
-  }
-}
-
-@for $i from 1 through 12 {
-  .col-md-#{$i} {
-    $width: 100% / 12 * $i;
-    flex: 0 0 $width;
-    max-width: $width;
-  }
-}
-
-@for $i from 1 through 12 {
-  .col-lg-#{$i} {
-    $width: 100% / 12 * $i;
-    flex: 0 0 $width;
-    max-width: $width;
-  }
-}
-
-@for $i from 1 through 12 {
-  .col-xl-#{$i} {
-    $width: 100% / 12 * $i;
-    flex: 0 0 $width;
-    max-width: $width;
-  }
 }
 
 /* Media queries */
@@ -175,13 +47,13 @@ section {
 }
 
 @media (min-width: 768px) {
-  @include grid("sm");
+  @include grid("md");
 }
 
 @media (min-width: 992px) {
-  @include grid("sm");
+  @include grid("lg");
 }
 
 @media (min-width: 1200px) {
-  @include grid("sm");
+  @include grid("xl");
 }

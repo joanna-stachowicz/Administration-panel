@@ -1,17 +1,23 @@
 .page_header {
   @include header($header-color, $font-medium);
   text-transform: uppercase;
+  margin: 0 0;
+  padding: 15px 15px;
 }
 
 .section_header {
   @include header($header-color, $font-bold);
 }
 
-.table-header {
+.table_header {
   @include header($header-color, $font-bold, 13px);
 }
 
-.input-text {
+.nav_header {
+  @include header($header-color, $font-light);
+}
+
+.input_text {
   @include header($text-input-color, $font-light, 14px);
 }
 

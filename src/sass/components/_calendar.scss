@@ -1,35 +1,53 @@
-.date-period-wrapper {
+.calendar-wrapper {
+  margin: 0 auto;
   @include flex;
-  position: relative;
-  border: 1px solid $pseudo-color;
-  border-radius: $radius;
-  width: 360px;
-  height: 40px;
+  justify-content: center;
 
-  &::after {
-    position: absolute;
-    content: "";
-    background: $pseudo-color;
-    width: 1px;
-    height: 80%;
-    top: 10%;
-    right: 52%;
+  .date-period-wrapper {
+    @include flex;
+    position: relative;
+    flex-wrap: nowrap;
+    border: 1px solid $pseudo-color;
+    border-radius: $radius;
+    width: 360px;
+    height: 40px;
+    margin-right: 20px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: $pseudo-color;
+      width: 1px;
+      height: 80%;
+      top: 10%;
+      right: 56%;
+      transition: $transition;
+    }
+
+    &:hover {
+      border-color: $input-hover-color;
+
+      a {
+        color: $input-hover-color;
+      }
+    }
+
+    input {
+      border: none;
+      width: 90px;
+      padding-left: 14px;
+    }
+
+    a {
+      @include icon;
+      padding-right: 14px;
+    }
   }
 
-  &:hover {
-    border-color: $input-hover-color;
-  }
-
-  input {
-    border: none;
-    width: 150px;
-  }
-
-  img {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    bottom: 12px;
-    right: 18px;
+  a {
+    @include icon;
+    color: $color-light;
+    width: 41px;
+    margin: 10px 0;
   }
 }
