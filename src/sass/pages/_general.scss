@@ -121,3 +121,10 @@
     display: none;
   }
 }
+
+.login-wrapper {
+  p:last-of-type {
+    font-family: $paragraph-font;
+    padding-left: 12px;
+  }
+}

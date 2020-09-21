@@ -1,12 +1,9 @@
 .navigation {
   background-color: $text-color;
-  width: 214px;
-  flex: 0 0 214px;
+  @include navigation-width;
 
   .brand-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 0 26px;
+    @include brand-wrapper-inner;
 
     .brand-name {
       flex: 1 0 70%;
@@ -52,29 +49,24 @@
   }
 
   .manager {
-    padding: 12px 26px;
+    @include manager-padding;
   }
 
   .manager-wrapper {
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
+    @include manager-wrapper-inner;
 
     img {
       border-radius: 50%;
-      width: 56px;
-      height: 56px;
+      @include manager-img;
     }
 
     &::before {
       position: absolute;
       content: "";
       background: #04ae00;
-      width: 12px;
-      height: 12px;
       border-radius: 50%;
       top: 1%;
-      left: 26%;
+      @include manager-before;
     }
 
     a {
@@ -100,8 +92,58 @@
     width: 68px;
     flex: 0 0 78px;
 
+    &.show {
+      @include navigation-width;
+
+      .nav_header {
+        display: block;
+      }
+
+      .brand-wrapper {
+        @include brand-wrapper-inner;
+
+        .brand-name {
+          display: block;
+        }
+      }
+
+      .manager {
+        @include manager-padding;
+
+        .page_header {
+          display: block;
+        }
+
+        .manager-wrapper {
+          @include manager-wrapper-inner;
+
+          a {
+            display: block;
+          }
+
+          img {
+            margin: 0 0;
+            @include manager-img;
+          }
+
+          &::before {
+            @include manager-before;
+          }
+        }
+      }
+      .nav-invisible-wrapper a {
+        text-align: left;
+        padding-left: 26px;
+      }
+    }
+
     .invisible-wrapper {
       flex: 0 0 15%;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
     }
 
     .visible-wrapper {
