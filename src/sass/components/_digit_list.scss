@@ -8,3 +8,10 @@
   flex: 0 0 45%;
   width: 367px;
 }
+
+@media (max-width: 767px) {
+  .list-item-wrapper {
+    flex: 0 0 60%;
+    margin: 0 auto;
+  }
+}
